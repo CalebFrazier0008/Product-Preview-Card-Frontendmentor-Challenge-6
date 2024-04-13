@@ -1,0 +1,221 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+}
+.Container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-color: hsl(30, 38%, 92%);
+  align-items: center;
+  justify-content: center;
+}
+.Card {
+  display: flex;
+  flex-direction: column;
+  height: 580px;
+  width: 337px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.Card-Img {
+  width: auto;
+  height: 244px;
+  background-color: gray;
+}
+.Card-Text {
+  flex-basis: 90%;
+  max-height: 200px;
+  padding: 20px;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  margin-top: 10px;
+  font-size: 20px;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: hsl(228, 12%, 48%);
+}
+img {
+  height: 100%;
+  width: 100%;
+}
+.Item {
+  letter-spacing: 5px;
+  color: hsl(228, 12%, 48%);
+  font-family: ;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+}
+.Name {
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: "Fraunces", serif;
+  font-size: 30px;
+  color: hsl(212, 21%, 14%);
+}
+.Description {
+  margin-top: 10px;
+}
+.Price-Container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+}
+.Price {
+  font-size: 30px;
+  margin-right: 20px;
+  margin-left: 10px;
+  color: hsl(158, 36%, 37%);
+  font-weight: 700;
+  font-family: "Fraunces", serif;
+}
+.Old-Price {
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.Bottom {
+  display: flex;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  height: 45%;
+  background-color: white;
+  flex-direction: column;
+  gap: 15px;
+}
+.Button {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 93%;
+  height: 100%;
+  align-self: center;
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-weight: 700;
+}
+button:hover {
+  background-color: hsl(158, 31%, 20%);
+}
+svg {
+  margin-right: 10px;
+}
+.Desktop-Image {
+  display: none;
+}
+@media only screen and (min-width: 1440px) {
+  .Card {
+    display: grid;
+    grid-template-rows: 75% 25%;
+    grid-template-columns: 50% 50%;
+    height: 600px;
+    width: 750px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    grid-template-areas:
+      "grid-img grid-text"
+      "grid-img grid-price";
+  }
+  .Desktop-Image {
+    display: inline-block;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .Mobile-Image {
+    display: none;
+  }
+  .Card-Img {
+    grid-area: grid-img;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+  }
+
+  .Card-Text {
+    grid-area: grid-text;
+    flex-basis: 90%;
+    max-height: 200px;
+    padding: 20px;
+    padding-right: 40px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  p {
+    margin-top: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    color: hsl(228, 12%, 48%);
+  }
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  .Item {
+    letter-spacing: 5px;
+    color: hsl(228, 12%, 48%);
+    font-family: ;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+  }
+  .Name {
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: "Fraunces", serif;
+    font-size: 40px;
+    color: hsl(212, 21%, 14%);
+  }
+  .Description {
+    margin-top: 10px;
+  }
+  .Bottom {
+    display: flex;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    height: 100%;
+    background-color: white;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .Button {
+    display: flex;
+    align-self: center;
+    width: 100%;
+    height: 40%;
+    justify-content: center;
+    align-items: center;
+  }
+}
